@@ -12,7 +12,7 @@ services:
     environment:
       - HOME=/config
       - FLOOD_OPTION_host=0.0.0.0
-      - FLOOD_OPTION_port=8000
+      - FLOOD_OPTION_port=3000
 
       # flood login
       - FLOOD_OPTION_username=${FLOOD_USER}
@@ -25,4 +25,4 @@ services:
       - FLOOD_OPTION_transmission_password=${TR_PASS}
 
     volumes:
-      - ./flood-data:/config
+      - flood-data:/config

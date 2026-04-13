@@ -26,3 +26,6 @@ services:
 
     volumes:
       - flood-data:/config
+
+volumes:
+  flood-data:

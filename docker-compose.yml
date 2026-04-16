@@ -13,7 +13,7 @@ services:
       - HOME=/config
       - FLOOD_OPTION_host=0.0.0.0
       - FLOOD_OPTION_port=3000
-      - FLOOD_OPTION_allowedpath=/home/teller/media/films
+      - FLOOD_OPTION_allowedPaths=["/home/teller/media/films"]
 
     volumes:
       - flood-data:/config

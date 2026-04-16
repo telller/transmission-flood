@@ -27,15 +27,8 @@ pipeline {
 
         stage('Docker Compose Up') {
             steps {
-                withCredentials([
-                    string(credentialsId: 'flood-user', variable: 'FLOOD_USER'),
-                    string(credentialsId: 'flood-pass', variable: 'FLOOD_PASS'),
-                    string(credentialsId: 'tr-user', variable: 'TR_USER'),
-                    string(credentialsId: 'tr-pass', variable: 'TR_PASS'),
-                ]) {
-                    dir("${PROJECT_DIR}") {
-                        sh "docker-compose -f ${COMPOSE_FILE} up -d --build"
-                    }
+                dir("${PROJECT_DIR}") {
+                    sh "docker-compose -f ${COMPOSE_FILE} up -d --build"
                 }
             }
         }

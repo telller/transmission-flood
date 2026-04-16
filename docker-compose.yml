@@ -14,14 +14,8 @@ services:
       - FLOOD_OPTION_host=0.0.0.0
       - FLOOD_OPTION_port=3000
 
-      # flood login
-      - FLOOD_OPTION_username=${FLOOD_USER}
-      - FLOOD_OPTION_password=${FLOOD_PASS}
-
     volumes:
       - flood-data:/config
-
-    user: "0:0"
 
 volumes:
   flood-data:

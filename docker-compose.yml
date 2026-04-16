@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   flood:
-    image: jesec/flood:latest
+    build: .
     container_name: flood
     restart: unless-stopped
 

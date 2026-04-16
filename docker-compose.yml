@@ -17,7 +17,5 @@ services:
     volumes:
       - flood-data:/config
 
-    user: "0:0"
-
 volumes:
   flood-data:
